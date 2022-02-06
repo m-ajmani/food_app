@@ -1,0 +1,18 @@
+{% extends "food/base.html" %}
+{% block content %}
+		<h1>Review Page</h1>
+		<p>Here you can see some honest reviews from customers who have tried our food.</p>
+		<p>Happy Eating!!</p>
+	{% for review in reviews %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <h2 class="article-title" href="#">{{ review.title }}</h2>
+		      <small class="text-muted">Written By: {{ review.author }}</small>
+		    </div>
+		    <p class="article-content">{{ review.content }}</p>
+		  </div>
+		</article>
+		
+	{% endfor %}
+{% endblock content %}

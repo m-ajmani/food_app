@@ -1,0 +1,19 @@
+{% extends "food/base.html" %}
+{% block content %}
+		<h1>Available Food Options</h1>
+		<p>Here you can see a list of the most delicious items on our menu.</p>
+		<p>Happy Eating!!</p>
+
+	{% for food in choices %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <h2 class="mr-2" href="#">{{ food.name }}</h2>
+		      <small class="text-muted">{{ post.date_posted }}</small>
+		    </div>
+		    <p class="article-content">Cost: {{ food.cost }}</p>
+		  </div>
+		</article>
+		
+	{% endfor %}
+{% endblock content %}
